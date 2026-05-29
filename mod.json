@@ -1,0 +1,37 @@
+{
+    "geode": "5.7.1",
+    "gd": {
+        "win": "2.2081",
+        "mac": "2.2081",
+        "android": "2.2081"
+    },
+    "id": "cyraxorig.lua-executor",
+    "name": "Lua Executor",
+    "version": "1.0.0",
+    "developer": "cyraxorig",
+    "description": "Execute Lua 5.4 scripts inside Geometry Dash with full GD API bindings",
+    "repository": "https://github.com/yourname/lua-executor",
+    "tags": ["developer", "cheat", "gameplay"],
+    "settings": {
+        "open-keybind": {
+            "name": "Open Executor",
+            "description": "Keyboard shortcut to open the Lua Executor window",
+            "type": "string",
+            "default": "F4"
+        },
+        "font-size": {
+            "name": "Font Size",
+            "description": "Font size for the code editor",
+            "type": "int",
+            "default": 14,
+            "min": 10,
+            "max": 24
+        },
+        "auto-clear-console": {
+            "name": "Auto-clear Console",
+            "description": "Clear console output before each execution",
+            "type": "bool",
+            "default": false
+        }
+    }
+}
