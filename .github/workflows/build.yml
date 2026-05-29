@@ -9,12 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: nttld/setup-ndk@v1
+      - uses: geode-sdk/build-geode-mod@main
         with:
-          ndk-version: r26d
-      - uses: geode-sdk/build-geode-mod/setup@main
-      - run: cmake -B build -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-23 -DGEODE_TARGET_PLATFORM=Android64
-      - run: cmake --build build --parallel
+          platform: android64
       - uses: actions/upload-artifact@v4
         with:
           name: lua-executor-android64
